@@ -1,5 +1,5 @@
 # Lifeline Portfolio
-## Vagabond
+
 I am creating this Portfolio test website to showcase the skills i am currently learning and perfecting. 
 The website is based off a tutorial from https://github.com/Maclinz/JS_CSS_PortfolioProject 
 
@@ -21,4 +21,6 @@ git commit -m "<Message>" | git commit -m "fix(app) Made a small fix to variable
 
 git push 
 ```
+
+
 
