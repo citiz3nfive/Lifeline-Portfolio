@@ -8,3 +8,17 @@ Hopefully when i am finished with this and i am more comfortable with the code, 
 
 (The main 2 pages are completed, and i currently working on the rest when i find the time.)
 
+
+
+Git steps
+
+```
+git status # This will tell you which files have been changed
+
+git add <file location>
+
+git commit -m "<Message>" | git commit -m "fix(app) Made a small fix to variables" | git commit -m "fix(infra) Changed vRAM on VM"
+
+git push 
+```
+
