@@ -21,3 +21,4 @@ git commit -m "<Message>" | git commit -m "fix(app) Made a small fix to variable
 
 git push 
 ```
+
