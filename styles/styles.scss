@@ -377,6 +377,42 @@ section{
     }
 }
 
+//Portfolios
+
+.port-text{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.portfolios{
+    display: grid;
+    grid-template-columns: repeat(3, 1f);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    .portfolio-item{
+        position: relative;
+        border-radius: 15px;
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+        .hover-items{
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 15px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
 
 /*independant components*/
 .btn-con{
