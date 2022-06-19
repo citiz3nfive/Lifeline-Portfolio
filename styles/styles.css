@@ -22,6 +22,20 @@
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
+.light-mode {
+  --color-primary: #FFFFFF;
+  --color-secondary: #f9cd2d;
+  --color-white: #454e56;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+}
+
 body {
   background-color: var(--color-primary);
   font-family: 'Poppins', sans-serif;
@@ -91,13 +105,24 @@ section {
           transform: translateY(0) scale(1);
 }
 
-.active {
-  display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
+.container {
+  display: none;
+  -webkit-transform: translateY(-100%) scale(0);
+          transform: translateY(-100%) scale(0);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-color: var(--color-primary);
 }
 
-@-webkit-keyframes scaleAnim {
+.active {
+  display: block;
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+  -webkit-transform: translateY(0) scaleY(1);
+          transform: translateY(0) scaleY(1);
+}
+
+@-webkit-keyframes appear {
   0% {
     -webkit-transform: translateY(-100%) scaleY(0);
             transform: translateY(-100%) scaleY(0);
@@ -108,7 +133,7 @@ section {
   }
 }
 
-@keyframes scaleAnim {
+@keyframes appear {
   0% {
     -webkit-transform: translateY(-100%) scaleY(0);
             transform: translateY(-100%) scaleY(0);
@@ -174,6 +199,41 @@ section {
 
 .controls .control i {
   font-size: 1.2rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.theme-btn:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.theme-btn i {
+  font-size: 1.4rem;
   color: var(--color-grey-2);
   pointer-events: none;
 }
